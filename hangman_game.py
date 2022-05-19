@@ -24,6 +24,7 @@ def welcome_hangman_game_message():
 def loading_secret_word():
     with open("words.txt") as file:
         words = file.readlines()
+
     from random import randint
     num = randint(0, len(words))
     secret_word = words[num].strip().upper()
@@ -42,8 +43,7 @@ def hangman_game_level_selector():
         elif level == 2:
             command = 2
         elif level == 3:
-            command = 3
-            
+            command = 3            
         else:
             print("\n\nError, enter a valid number [1 | 2 | 3]\n\n")
             continue
@@ -93,31 +93,31 @@ def hangman_draws(fails):
         print(" |            ")
         print(" |            ")
 
-    if(fails == 2):
+    elif(fails == 2):
         print(" |      (_)   ")
         print(" |      \     ")
         print(" |            ")
         print(" |            ")
 
-    if(fails == 3):
+    elif(fails == 3):
         print(" |      (_)   ")
         print(" |      \|    ")
         print(" |            ")
         print(" |            ")
 
-    if(fails == 4):
+    elif(fails == 4):
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |            ")
         print(" |            ")
 
-    if(fails == 5):
+    elif(fails == 5):
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |       |    ")
         print(" |      /     ")
 
-    if (fails == 6):
+    elif (fails == 6):
         print(" |      (_)   ")
         print(" |      \|/   ")
         print(" |       |    ")
@@ -144,7 +144,6 @@ def final_hangman_game_message(secret_word, hit):
              _.' '._        
             '-------'          
         """, end="")
-    
     else:
         print("Sorry, you lose")
         print("""        
