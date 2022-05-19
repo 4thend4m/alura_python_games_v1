@@ -61,7 +61,6 @@ def guessing_game_level_selector():
         
 def guessing_game_player(attempts, missed_score, secret_number, total_score):
     for c in range(1, attempts+1):
-
         number = int(input("Enter a number [{0}] -> ".format(attempts)))
         attempts -= 1
 
